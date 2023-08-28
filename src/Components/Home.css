@@ -1,0 +1,295 @@
+.plashoe{
+letter-spacing: 5px;
+font-weight: bold;
+}
+
+.homepgdiv{
+  
+    
+    font-size:small;
+    height:30px;
+    width:100%;
+    color:black;
+    letter-spacing: 5px;
+}
+
+
+.nav1{
+    background-color: rgb(151, 157, 157);
+    
+}
+.navclass{
+    width:100%;
+    height:80px;
+    background-color: #888888;
+}
+.icon{
+    color:black;
+}
+.head1{
+    height:10px;
+    background-color: rgb(242, 242, 248);
+    font-size: small;
+padding: 15px;
+}
+.para1{
+    color:yellowgreen;
+    height:10px;
+    
+    font-size: small;
+padding: 15px;
+}
+
+
+.bgimg{
+    position: relative;
+
+    background-image: url("E:\react tutorial\shoe-e-commerce\src\bgimg2.jpg");
+     height:100vh;
+    width:90%; 
+    margin: 0px auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.leftdiv{
+    width: 50%;
+    height:100vh;
+display :flex;
+justify-content:center;
+}
+
+
+.quote{
+    
+margin-top: 200px;
+color:white;
+font-weight:bold;
+font-style:normal;
+font-size:75px;
+text-align: left;
+}
+
+           
+.btn-hom-shop{
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+}
+
+
+
+
+
+.shopmen{
+    height: 50px;
+    width: 150px;
+   
+    background-color: rgb(237, 235, 235); 
+    border-style: none; 
+    
+    
+}
+   .btnshopmen{
+    color:rgb(19, 18, 18);
+    letter-spacing: 2px;
+   }       
+
+   .shopwomen{
+    height: 50px;
+    width: 200px;
+    /* margin-left:100px;  */
+    background-color: rgb(237, 235, 235);  
+    
+    border-style: none;
+   }
+   .para1{
+    color:white;
+    font-size:large;
+
+   }
+
+   
+.formlogi2{
+    height: 400px;
+    width: 500px;
+    background-color:white;
+    margin-top:100px ;
+    border: 0px solid ;
+    
+}
+
+
+   .formlogi{
+       width: 100%;
+       height: 100vh;
+       display: flex;
+      align-items: center;
+       background-color:rgb(217, 218, 225);
+      flex-direction: column;
+   }
+   .formlogi1{
+    margin-top: 50px;
+   }
+   .btnform1{
+height:30px;
+width:80px;
+border: 0px solid;
+border-radius: 3px;
+background-color: rgb(69, 67, 73);
+color:white ;
+
+   }
+   .btnform1:hover{
+    box-shadow: 5px 10px 18px #888888;
+   }
+   input{
+  border: 1px solid;
+  border-radius: 5px;
+   }
+
+
+   .forgotpasswd{
+
+ 
+   }
+
+  .fawardicon{
+   font-size: 80px;
+   top:500px;
+   }
+
+.my-5{
+    display: flex;
+    justify-content: center;
+    width: 400px;
+}
+
+
+.reset{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+
+    justify-content: center;
+    background-color: rgb(231, 235, 235);
+}
+.resetpara{
+    height: 500px;
+    width:600px;
+    background-color:white;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    align-items: center;
+    
+}
+
+
+  .resetpara1{
+height: 300px;;
+   color: rgb(62, 58, 58);
+
+  }
+  .resetpass{
+    height:40px;
+    width:150px;
+    border: 0px solid;
+    border-radius: 3px;
+    background-color: rgb(69, 67, 73);
+    color:white ;
+
+  }
+
+
+
+
+
+/*-registration----*/
+.formlogin1 {
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .formlogin1 label {
+    font-weight: bold;
+  }
+  
+  .formlogin1 input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .btnform {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .btnform:hover {
+    background-color: #0056b3;
+  }
+  
+  .formlogin2 {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(215, 219, 221);
+  }
+ 
+  .menhead{
+    margin-top: 50px;
+    text-align: left;
+    font-size: xx-large;
+    height:150px;
+    width:100%;
+    color:black;
+    letter-spacing: 5px;
+  }
+  /*====showproduct)*/
+  .show_product{
+   
+   display: flex; 
+   justify-content: center;
+  }
+.card-container{
+  
+  height: 1000px;
+  width: 800px;
+  align-items: center;
+  margin-top: 75px;
+
+}
+.w-50 p-3{
+  height: 900px;
+  width: 600px;
+}
+.incrementbtn{
+  background-color: green;
+color: white;
+font-size: 18px;
+padding: 5px 10px;
+border: none;
+cursor: pointer;
+margin-right: 10px;
+}
+.decrementbtn{
+  background-color: green;
+  color: white;
+  font-size: 18px;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
