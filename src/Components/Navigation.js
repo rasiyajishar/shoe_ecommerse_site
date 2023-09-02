@@ -1,7 +1,11 @@
+
+
+
+
+
+
 import { useState } from "react";
 import React from "react";
-
-
 
 import "../Components/Home.css";
 import {
@@ -19,6 +23,8 @@ import {
   MDBDropdownMenu,
   MDBDropdownItem,
   MDBCollapse,
+  MDBBadge,
+  MDBCol,
 } from "mdb-react-ui-kit";
 
 import { BsFillCartFill } from "react-icons/bs";
@@ -28,46 +34,74 @@ import { mycontext } from "./Context";
 import { useContext } from "react";
 const Navigation = () => {
   const [showBasic, setShowBasic] = useState(true);
-  const {login,setLogin,username,setLogout}=useContext(mycontext)
-const navigate=useNavigate()
-const towomen=()=>{
-  navigate('/Women')
-}
-const tohome=()=>{
-  navigate('/')
-}
-const tomen=()=>{
-    navigate('/Men')
-}
-const tocart=()=>{
-    navigate('/Cart')
-}
-const tologin=()=>{
-    navigate('/Login')
-}
-const toourstory=()=>{
-    navigate('/Ourstory')
-}
-const tocollection=()=>{
-    navigate('/Collection')
-}
-const tocontact=()=>{
-    navigate('/Contact')
-}
-const toregistration=()=>{
-  navigate('/Registration')
-}
+  const {
+    products,
+    login,
+    setLogin,
+    username,
+    setLogout,
+    cart,
+    setCart,
+    searchquery,
+    setSearchquery,
+    searchresults,
+    setSearchresults,
+    setUsername
+  } = useContext(mycontext);
 
-const logout=()=>{
-  setLogout(false)
-  alert('logout')
-}
+  
+
+  
+
+  const navigate = useNavigate();
+  const towomen = () => {
+    navigate("/Women");
+  };
+  const tohome = () => {
+    navigate("/");
+  };
+  const tomen = () => {
+    navigate("/Men");
+  };
+  const tocart = () => {
+    navigate("/Cart");
+  };
+  const tologin = () => {
+    navigate("/Login");
+  };
+  const toourstory = () => {
+    navigate("/Ourstory");
+  };
+  const tocollection = () => {
+    navigate("/Collection");
+  };
+  const tocontact = () => {
+    navigate("/Contact");
+  };
+  const toregistration = () => {
+    navigate("/Registration");
+  };
+
+  const logout = () => {
+    setLogout(false);
+    alert("logout");
+    setUsername('');
+  };
+  
   return (
     <>
-      {/* <div className="head1"><p className="para1">Free Express Shipping on all orders with all duties included</p></div>*/ }
-      <MDBNavbar className="navclass" expand="lg" light bgColor="light" sticky="top">
+      {/* <div className="head1"><p className="para1">Free Express Shipping on all orders with all duties included</p></div>*/}
+      <MDBNavbar
+        className="navclass"
+        expand="lg"
+        light
+        bgColor="light"
+        sticky="top"
+      >
         <MDBContainer fluid>
-          <MDBNavbarBrand className="plashoe"  onClick={tohome}>PLASHOE</MDBNavbarBrand>
+          <MDBNavbarBrand className="plashoe" onClick={tohome}>
+            PLASHOE
+          </MDBNavbarBrand>
 
           <MDBNavbarToggler
             aria-controls="navbarSupportedContent"
@@ -82,20 +116,32 @@ const logout=()=>{
             <MDBNavbarNav className="mr-auto mb-2 mb-lg-0">
               <MDBNavbarItem>
                 <MDBDropdown>
-                  <MDBDropdownToggle tag="a" className="nav-link" role="button" onClick={tomen}>
+                  <MDBDropdownToggle
+                    tag="a"
+                    className="nav-link"
+                    role="button"
+                    onClick={tomen}
+                  >
                     MEN
                   </MDBDropdownToggle>
                   <MDBDropdownMenu>
                     <MDBDropdownItem link>Sneakers</MDBDropdownItem>
                     <MDBDropdownItem link>Loafer</MDBDropdownItem>
-                    <MDBDropdownItem link>Something else here</MDBDropdownItem>
-                  </MDBDropdownMenu>
+                    <MDBDropdownItem link>
+                      Something else here
+                    </MDBDropdownItem>{" "}
+                  </MDBDropdownMenu>{" "}
                 </MDBDropdown>
               </MDBNavbarItem>
 
               <MDBNavbarItem>
                 <MDBDropdown>
-                  <MDBDropdownToggle tag="a" className="nav-link" role="button" onClick={towomen}>
+                  <MDBDropdownToggle
+                    tag="a"
+                    className="nav-link"
+                    role="button"
+                    onClick={towomen}
+                  >
                     WOMEN
                   </MDBDropdownToggle>
                   <MDBDropdownMenu>
@@ -107,18 +153,26 @@ const logout=()=>{
               </MDBNavbarItem>
 
               <MDBNavbarItem>
-                <MDBNavbarLink active aria-current="page" href="#" onClick={tocollection}>
+                <MDBNavbarLink
+                  active
+                  aria-current="page"
+                  href="#"
+                  onClick={tocollection}
+                >
                   COLLECTION
                 </MDBNavbarLink>
               </MDBNavbarItem>
 
               <MDBNavbarItem>
-                <MDBNavbarLink active aria-current="page" href="#" onClick={tocontact} >
+                <MDBNavbarLink
+                  active
+                  aria-current="page"
+                  href="#"
+                  onClick={tocontact}
+                >
                   CONTACT
                 </MDBNavbarLink>
               </MDBNavbarItem>
-
-
 
               <MDBNavbarItem>
                 <MDBNavbarLink href="#">LOOKBOOK</MDBNavbarLink>
@@ -131,63 +185,71 @@ const logout=()=>{
               </MDBNavbarItem>
 
               <MDBNavbarItem>
-                <MDBNavbarLink active aria-current="page" href="#" onClick={toourstory}>
+                <MDBNavbarLink
+                  active
+                  aria-current="page"
+                  href="#"
+                  onClick={toourstory}
+                >
                   OUR STORY
                 </MDBNavbarLink>
               </MDBNavbarItem>
 
               <MDBNavbarItem>
                 <MDBNavbarLink href="#" onClick={tocart}>
-                  <BsFillCartFill />
+                  <BsFillCartFill />{" "}
+                  <>
+                    <a className="mx-3" href="#!">
+                      <MDBIcon fas icon="shoppingcart" size="sm" />
+                      <MDBBadge color="danger" notification pill>
+                        {cart.length}
+                      </MDBBadge>
+                    </a>
+                  </>
                 </MDBNavbarLink>
               </MDBNavbarItem>
 
-
               <MDBNavbarItem>
                 <MDBDropdown>
-                  <MDBDropdownToggle tag="a" className="nav-link" role="button" >
+                  <MDBDropdownToggle tag="a" className="nav-link" role="button">
                     <BsPersonFill />
                   </MDBDropdownToggle>
-{(login==false)?  <MDBDropdownMenu>
-                    <MDBDropdownItem link onClick={toregistration}>signup</MDBDropdownItem>
-                  </MDBDropdownMenu> : <MDBDropdownMenu>
-                  <MDBDropdownItem link>{username}</MDBDropdownItem>
-                    <MDBDropdownItem link onClick={logout}>logout</MDBDropdownItem>
-                  </MDBDropdownMenu>
-}
-                 
+                  {login == false ? (
+                    <MDBDropdownMenu>
+                      <MDBDropdownItem link onClick={toregistration}>
+                        signup
+                      </MDBDropdownItem>
+                    </MDBDropdownMenu>
+                  ) : (
+                    <MDBDropdownMenu>
+                      <MDBDropdownItem link>{username}</MDBDropdownItem>
+                      <MDBDropdownItem link onClick={logout}>
+                        logout
+                      </MDBDropdownItem>
+                      
+                    </MDBDropdownMenu>
+                  )}
                 </MDBDropdown>
               </MDBNavbarItem>
-
-
-
-              
             </MDBNavbarNav>
 
-            <form className="d-flex input-group w-auto">
-              <input
-                type="search"
-                className="form-control"
-                placeholder="Type query"
-                aria-label="Search"
-              />
-              <MDBBtn color="primary">Search</MDBBtn>
-            </form>
+            
           </MDBCollapse>
         </MDBContainer>
       </MDBNavbar>
-      
-      
 
       
+      
 
-    </>
-
-
-
-
-
+      
+      
+     
+     
+    </>                     
+    
   );
 };
 
 export default Navigation;
+
+

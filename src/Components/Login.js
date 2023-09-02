@@ -21,8 +21,14 @@ const Login = () => {
     const passwordValue=passwordref.current.value
    console.log(emailValue)
    console.log(passwordValue)
+   if (emailValue === 'admin@gmail.com' && passwordValue === 'admin') {
+    setLogin(true)
+    nav('/Admin_home')
+  }
+  else {
+
    const value=signup.filter((x)=>x.email==emailValue && x.password == passwordValue)
-setLogin(true)
+   setLogin(true)
    const username=value.map((user)=>user.name)
    if(value.length > 0){
     setUsername(username)
@@ -34,6 +40,7 @@ setLogin(true)
   {alert("plz register")}
   
   }
+}
  
   return (
 
@@ -72,7 +79,7 @@ setLogin(true)
        <Link to="/Reset">
       <p className="forgotpasswd">forgot your password?</p></Link>
       <Link to="/Registration">
-      <p className="forgotpasswd">New User? Log in please</p></Link> 
+      <p className="forgotpasswd">New User? Register please</p></Link> 
 
       <br />
      

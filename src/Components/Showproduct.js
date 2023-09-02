@@ -7,36 +7,56 @@ import { Card } from 'react-bootstrap'
 
 const Showproduct = () => {
 
-  
+<Navigation /> 
   
   
     const {id}=useParams()
     // console.log(id);
     const product_id=id
-    const {products,cart,setCart}=useContext(mycontext)
+    const {products,qty,setQty,cart,login,setCart}=useContext(mycontext)
       const nav1 = useNavigate();
-    
+      // const tocart=()=>{
+      //   nav1('/Cart')
+
+
    const clickProduct = products.filter(
-    (product) => product.id === product_id
-   );
+     (product) => product.id === product_id
+    );
   
-const passid =(e)=>{
-    const id=e.target.id
+// const passid =(e)=>{
+//     const id=e.target.id
     
-    const filterdata=products.filter((product)=>product.id==id)
+//     const filterdata=products.filter((product)=>product.id==id)
 
     
+ 
 
-    setCart([...cart,...filterdata])
+    // setCart([...cart,...filterdata])
 
-    console.log(id);
+    // console.log(id);
 
-    nav1('/Cart')
+    // nav1('/Cart')
+    
+// }
 
+const passid = (e) => {
+  const id = e.target.id;
+  const filterdata = products.filter((product) => product.id === id);
+
+  if (login === true) {
+    if (cart.some(item => item.id === filterdata[0].id)) {
+      alert('Product is already added');
+    } else {
+      setCart([...cart, filterdata[0]]);
+      setQty(qty + 1);
+      alert('Successfully Added to cart');
+      nav1('/Cart')
+    }
+  } else {
+    alert("Please log in");
    
-}
-
-
+  }
+};
 
 
 
@@ -69,7 +89,7 @@ const passid =(e)=>{
                 <div>
                   <br />
                  <button id={product.id} onClick={passid}>Add to Cart</button>
-                  <button>View Cart</button>
+                  {/* <button onClick={tocart}>View Cart</button> */}
                 </div>
               </Card.Body>
             </div>

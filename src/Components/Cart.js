@@ -1,28 +1,47 @@
-import React from 'react'
-// import Navigation from './Navigation'
-import { Card } from 'react-bootstrap'
-import { useParams } from 'react-router-dom'
-import { useContext } from 'react'
-import { mycontext } from './Context'
-
+import React from 'react';
+import { Card } from 'react-bootstrap';
+import { useContext } from 'react';
+import { mycontext } from './Context';
 
 const Cart = () => {
+  const { products,setCart, cart,qty } = useContext(mycontext);
 
-  
-const {products,qty,setQty,cart}=useContext(mycontext)
+  const increment = (productId) => {
+    // Find the index of the product in the cart
+    const productIndex = cart.findIndex((product) => product.id === productId);
 
+    if (productIndex !== -1) {
+      const updatedCart = [...cart];
+      updatedCart[productIndex].quantity += 1;
+      // Assuming you have a price property in your product objects
+      updatedCart[productIndex].totalPrice = updatedCart[productIndex].price * updatedCart[productIndex].quantity;
 
-  const increment=(()=>setQty(qty+1))
- const decrement=(()=> setQty(qty- 1 > 0?qty - 1:1))
-  const totalPrice =cart[0].price * qty;
+      // Update the cart in the context
+      // Assuming you have a setCart function in your context
+      setCart(updatedCart);
+    }
+  };
+
+  const decrement = (productId) => {
+    // Find the index of the product in the cart
+    const productIndex = cart.findIndex((product) => product.id === productId);
+
+    if (productIndex !== -1 && cart[productIndex].quantity > 1) {
+      const updatedCart = [...cart];
+      updatedCart[productIndex].quantity -= 1;
+      // Assuming you have a price property in your product objects
+      updatedCart[productIndex].totalPrice = updatedCart[productIndex].price * updatedCart[productIndex].quantity;
+
+      // Update the cart in the context
+      // Assuming you have a setCart function in your context
+      setCart(updatedCart);
+    }
+  };
 
   return (
     <div>
-      <div>
-
       {cart.map((product) => (
-      <div key={product.id} className='div-m-2'>
-
+        <div key={product.id} className='div-m-2'>
          <Card>
           <div className="d-flex">
             <div style={{ width: "60vh" }}>
@@ -42,10 +61,11 @@ const {products,qty,setQty,cart}=useContext(mycontext)
                 </Card.Text>
                 <div>
                   <br />
-                  <h1>{qty}</h1>
-                 <button className='incrementbtn'  onClick={increment}>+</button> 
-                 <button className='decrementbtn' onClick={decrement}>-</button>  
-                  <p>Total Price: {totalPrice}</p>  
+                  <h1>Quantity:{product.quantity}</h1>
+                 <button className='incrementbtn'  onClick={()=>increment(product.id)}>+</button> 
+                 <button className='decrementbtn' onClick={()=>decrement(product.id)}>-</button>  
+                  <p>Total Price:{product.totalPrice}</p>  
+                  
                 </div>
               </Card.Body> 
              </div>
@@ -54,8 +74,8 @@ const {products,qty,setQty,cart}=useContext(mycontext)
        </div>
     ))}
   </div>
-  </div>
-  )
-}
 
-export default Cart
+  );
+};
+
+export default Cart;

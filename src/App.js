@@ -16,7 +16,7 @@ import { products } from './Components/productdata';
 import { mycontext } from './Components/Context';
 import Showproduct from './Components/Showproduct';
 import { useState } from 'react';
-
+import Admin_home from './Admin/Admin_home';
 
 function App() {
 const [qty,setQty]=useState(1)
@@ -26,33 +26,36 @@ const[signup,setSignup]=useState([])
 const[login,setLogin]=useState(false)
 const[username,setUsername]=useState()
 const[logout,setLogout]=useState()
+const[searchquery,setSearchquery]=useState('')
+const[searchresults,setSearchresults]=useState([])
   return (
 
     <div className="App">
 
-<mycontext.Provider value={{
-  products,
 
-  qty,
-  setQty,
-  
-  cart,
-  setCart,
-  
- 
-  
-  signup,
-  setSignup,
 
-  login,
-  setLogin,
+<mycontext.Provider
+        value={{
+          products,
+          qty,
+          setQty,
+          cart,
+          setCart,
+          signup,
+          setSignup,
+          login,
+          setLogin,
+          username,
+          setUsername,
+          logout,
+          setLogout,
+          searchquery,
+          setSearchquery,
+          searchresults,
+          setSearchresults
+        }}
+      >
 
-  username,
-  setUsername,
-
-  logout,
-  setLogout,
-  }}>
 <Routes>
   <Route path="/" element={<Home />} />
   <Route path="/Men" element={<Men />} />
@@ -65,6 +68,7 @@ const[logout,setLogout]=useState()
 <Route path="/Registration" element={<Registration />} />
 <Route path="/Reset" element={<Reset />} />
 <Route path="/Showproduct/:id" element={<Showproduct />} />
+<Route path='/Admin_home' element={<Admin_home />} />
 </Routes>
 </mycontext.Provider>
     </div>

@@ -55,7 +55,8 @@ const handleSubmit=(e)=>{
           <button onClick={handleSubmit} className="btnform" type="submit">
             Submit
           </button>
-          <button onClick={()=>nav('/')}>Home</button>
+          <p>All registered user please login</p>
+          <button onClick={()=>nav('/Login')}>Login</button>
 
 
           <br /> <br />

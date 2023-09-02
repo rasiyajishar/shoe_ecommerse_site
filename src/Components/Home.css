@@ -293,3 +293,18 @@ margin-right: 10px;
   cursor: pointer;
   margin-right: 10px;
 }
+.searchbar{
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.listitem{
+  color: rgb(112, 29, 200);
+ list-style-type: none;
+}
+.listdiv{
+  
+  background-color: #dbcae7;
+  
+ 
+}
