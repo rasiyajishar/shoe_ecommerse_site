@@ -4,7 +4,8 @@ import { useContext } from 'react'
 import { mycontext } from './Context'
 import {Col,Container,Row,Card} from "react-bootstrap"
 import { useNavigate } from 'react-router-dom'
-import Footer from './Footer'
+import Footer from './Footer';
+import  Search  from "./Search";
 const Women = () => {
   const{products}=useContext(mycontext)
   const mynav2=useNavigate()
@@ -22,6 +23,7 @@ const idpass=(e)=>{
        <Navigation />
  
        <div className='menhead'>WOMEN</div>
+       <Search />
        <Container fluid className="my-5"  >
        <Row xs={1} md={2} lg={4} className="g-4">
          {filteredproduct.map((product) => (
