@@ -23,7 +23,9 @@ const Login = () => {
    console.log(passwordValue)
    if (emailValue === 'admin@gmail.com' && passwordValue === 'admin') {
     setLogin(true)
-    nav('/Admin_home')
+    setUsername(username)
+    nav('/Admin')
+
   }
   else {
 
@@ -65,8 +67,7 @@ const Login = () => {
           <input type="password" placeholder="password" ref={passwordref}/>
           <br />
           <br />
-          <input type="checkbox" /> &nbsp;{" "}
-          <label for="vehicle2"> Remember me</label>
+          <input type="checkbox" /> &nbsp;<label for="vehicle2"> Remember me</label>
           <br />
           <br />
           <button className="btnform1" type="submit" onClick={handleSubmit}>
@@ -75,9 +76,9 @@ const Login = () => {
           <br /> <br />
         </form>
       </div>
-      <br />
-       <Link to="/Reset">
-      <p className="forgotpasswd">forgot your password?</p></Link>
+      <br /> <br />
+       {/* <Link to="/Reset">
+      <p className="forgotpasswd">forgot your password?</p></Link> */}
       <Link to="/Registration">
       <p className="forgotpasswd">New User? Register please</p></Link> 
 

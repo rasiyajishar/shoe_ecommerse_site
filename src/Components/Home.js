@@ -4,6 +4,8 @@ import  Search  from "./Search";
 import "../Components/Home.css";
 import Navigation from "./Navigation";
 import { useNavigate } from "react-router-dom";
+import Footer from "./Footer";
+
 
 const Home = () => {
   const [showBasic, setShowBasic] = useState(true);
@@ -46,6 +48,7 @@ const tocollection=()=>{
 
         
       </diV>
+      <Footer />
     </>
   );
 };

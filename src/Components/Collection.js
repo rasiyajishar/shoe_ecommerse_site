@@ -1,6 +1,8 @@
 import React, { useContext } from 'react'                                                                                                              
 import { mycontext } from './Context'
 import {Col,Container,Row,Card} from "react-bootstrap"
+import Footer from './Footer'
+import  Search  from "./Search";
 import { useNavigate } from 'react-router-dom'
 import Navigation  from "./Navigation"
 const Collection = () => {
@@ -16,6 +18,7 @@ mynav(`/showproduct/${id}`)
         
         <Navigation /> 
         <div className='menhead'>COLLECTION</div> 
+        <Search />
         <Container fluid className="my-5"  >
       <Row xs={1} md={2} lg={4} className="g-4">
         {products.map((product) => (
@@ -64,8 +67,11 @@ mynav(`/showproduct/${id}`)
         ))}
       </Row>
     </Container>
-       
+     
+
+    <Footer />
         </div>
+         
   )
 }
 

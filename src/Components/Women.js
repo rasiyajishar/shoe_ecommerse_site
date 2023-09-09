@@ -1,11 +1,12 @@
 import React from 'react'
 import Navigation from './Navigation'
-import { products } from './productdata'
+import { useContext } from 'react'
+import { mycontext } from './Context'
 import {Col,Container,Row,Card} from "react-bootstrap"
 import { useNavigate } from 'react-router-dom'
-
+import Footer from './Footer'
 const Women = () => {
-
+  const{products}=useContext(mycontext)
   const mynav2=useNavigate()
 const idpass=(e)=>{
   const id=e.target.id
@@ -70,7 +71,7 @@ const idpass=(e)=>{
        </Row>
      </Container>
        
-       
+     <Footer />
     </div>
     </> 
   )

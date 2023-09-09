@@ -69,8 +69,11 @@ const Cart = () => {
                 </div>
               </Card.Body> 
              </div>
+             
           </div>
+          
         </Card> 
+        <button>Check out</button>
        </div>
     ))}
   </div>

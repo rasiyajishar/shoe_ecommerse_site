@@ -1,6 +1,5 @@
 
-
-export const products=[
+export const productdata=[
     
     {
     id:"1",
@@ -92,5 +91,121 @@ export const products=[
     type:"women",
     quantity:1,
     descr:"The HEYDUDE Wally Canvas shoe is the perfect combination of comfort, style, and versatility. Featuring a soft, breathable canvas upper, this shoe provides a snug and secure fit thanks to its unique elastic lacing system." 
-}
+},
+{
+id:"11",
+    name:"Women's HEYDUDE Wally",
+    price:2000,
+    image:"https://www.skechers.in/dw/image/v2/BGNZ_PRD/on/demandware.static/-/Sites-skechers_india/default/dw2cb4600c/images/large/196642425001-1.jpg?sw=310&sfrm=jpg' className='w-100'",
+    type:"women",
+    quantity:1,
+    descr:"The HEYDUDE Wally Canvas shoe is the perfect combination of comfort, style, and versatility. Featuring a soft, breathable canvas upper, this shoe provides a snug and secure fit thanks to its unique elastic lacing system." 
+},
+
+{
+id:"12",
+    name:"Women's HEYDUDE Wally",
+    price:2000,
+    image:"https://www.skechers.in/dw/image/v2/BGNZ_PRD/on/demandware.static/-/Sites-skechersin-Library/default/dwf9d68c9d/Category-Landing/Category-Desktop/Women/SP23_Women_Sandals.jpg?sw=500' className='w-100" ,
+    type:"women",
+    quantity:1,
+    descr:"The HEYDUDE Wally Canvas shoe is the perfect combination of comfort, style, and versatility. Featuring a soft, breathable canvas upper, this shoe provides a snug and secure fit thanks to its unique elastic lacing system." 
+},
+
+{
+id:"13",
+    name:"Women's HEYDUDE Wally",
+    price:2000,
+    image:"https://www.skechers.in/dw/image/v2/BGNZ_PRD/on/demandware.static/-/Sites-skechers_india/default/dw2cb4600c/images/large/196642425001-1.jpg?sw=310&sfrm=jpg' className='w-100'",
+    type:"women",
+    quantity:1,
+    descr:"The HEYDUDE Wally Canvas shoe is the perfect combination of comfort, style, and versatility. Featuring a soft, breathable canvas upper, this shoe provides a snug and secure fit thanks to its unique elastic lacing system." 
+},
+
+{
+id:"14",
+    name:"Women's HEYDUDE Wally",
+    price:2000,
+    image:"https://www.skechers.in/dw/image/v2/BGNZ_PRD/on/demandware.static/-/Sites-skechers_india/default/dw2cb4600c/images/large/196642425001-1.jpg?sw=310&sfrm=jpg' className='w-100'",
+    type:"women",
+    quantity:1,
+    descr:"The HEYDUDE Wally Canvas shoe is the perfect combination of comfort, style, and versatility. Featuring a soft, breathable canvas upper, this shoe provides a snug and secure fit thanks to its unique elastic lacing system." 
+},
+{
+    id:"15",
+        name:"Women's HEYDUDE Wally",
+        price:2000,
+        image:"https://www.skechers.in/dw/image/v2/BGNZ_PRD/on/demandware.static/-/Sites-skechers_india/default/dw2cb4600c/images/large/196642425001-1.jpg?sw=310&sfrm=jpg' className='w-100'",
+        type:"women",
+        quantity:1,
+        descr:"The HEYDUDE Wally Canvas shoe is the perfect combination of comfort, style, and versatility. Featuring a soft, breathable canvas upper, this shoe provides a snug and secure fit thanks to its unique elastic lacing system." 
+    },
+    
+{
+    id:"16",
+        name:"Women's HEYDUDE Wally",
+        price:2000,
+        image:"https://www.skechers.in/dw/image/v2/BGNZ_PRD/on/demandware.static/-/Sites-skechers_india/default/dw2cb4600c/images/large/196642425001-1.jpg?sw=310&sfrm=jpg' className='w-100'",
+        type:"women",
+        quantity:1,
+        descr:"The HEYDUDE Wally Canvas shoe is the perfect combination of comfort, style, and versatility. Featuring a soft, breathable canvas upper, this shoe provides a snug and secure fit thanks to its unique elastic lacing system." 
+    },
+    
+{
+    id:"17",
+        name:"Women's HEYDUDE Wally",
+        price:2000,
+        image:"https://www.skechers.com/dw/image/v2/BDCN_PRD/on/demandware.static/-/Sites-skechers-master/default/dw85a31b39/images/large/168027_CHOC.jpg?sw=300",
+        type:"women",
+        quantity:1,
+        descr:"The HEYDUDE Wally Canvas shoe is the perfect combination of comfort, style, and versatility. Featuring a soft, breathable canvas upper, this shoe provides a snug and secure fit thanks to its unique elastic lacing system." 
+    },
+    
+{
+    id:"18",
+        name:"Women's HEYDUDE Wally",
+        price:2000,
+        image:"https://www.skechers.in/dw/image/v2/BGNZ_PRD/on/demandware.static/-/Sites-skechersin-Library/default/dw0da37947/Category-Landing/Category-Desktop/Women/SP23_Women_SlipOn.jpg?sw=500",
+        type:"women",
+        quantity:1,
+        descr:"The HEYDUDE Wally Canvas shoe is the perfect combination of comfort, style, and versatility. Featuring a soft, breathable canvas upper, this shoe provides a snug and secure fit thanks to its unique elastic lacing system." 
+    },
+    {
+        id:"19",
+            name:"Women's HEYDUDE Wally",
+            price:2000,
+            image:"https://www.skechers.in/dw/image/v2/BGNZ_PRD/on/demandware.static/-/Sites-skechers_india/default/dw2cb4600c/images/large/196642425001-1.jpg?sw=310&sfrm=jpg' className='w-100'",
+            type:"women",
+            quantity:1,
+            descr:"The HEYDUDE Wally Canvas shoe is the perfect combination of comfort, style, and versatility. Featuring a soft, breathable canvas upper, this shoe provides a snug and secure fit thanks to its unique elastic lacing system." 
+        },
+        
+{
+    id:"20",
+        name:"Women's HEYDUDE Wally",
+        price:2000,
+        image:"https://www.skechers.in/dw/image/v2/BGNZ_PRD/on/demandware.static/-/Sites-skechersin-Library/default/dwd469dd7e/Category-Landing/Category-Desktop/Mens/SP23_Men_Sandals.jpg?sw=500",
+        type:"women",
+        quantity:1,
+        descr:"The HEYDUDE Wally Canvas shoe is the perfect combination of comfort, style, and versatility. Featuring a soft, breathable canvas upper, this shoe provides a snug and secure fit thanks to its unique elastic lacing system." 
+    },
+   
+{
+    id:"21",
+        name:"Women's HEYDUDE Wally",
+        price:2000,
+        image:"https://www.skechers.in/dw/image/v2/BGNZ_PRD/on/demandware.static/-/Sites-skechers_india/default/dw9c03fca8/images/large/196311468803-1.jpg?sw=310&sfrm=jpeg",
+        type:"women",
+        quantity:1,
+        descr:"The HEYDUDE Wally Canvas shoe is the perfect combination of comfort, style, and versatility. Featuring a soft, breathable canvas upper, this shoe provides a snug and secure fit thanks to its unique elastic lacing system." 
+    },
+    {
+        id:"22",
+            name:"Women's HEYDUDE Wally",
+            price:2000,
+            image:"https://www.skechers.in/dw/image/v2/BGNZ_PRD/on/demandware.static/-/Sites-skechers_india/default/dw6d80ad5c/images/large/194428039749-1.jpg?sw=310&sfrm=jpg",
+            type:"women",
+            quantity:1,
+            descr:"The HEYDUDE Wally Canvas shoe is the perfect combination of comfort, style, and versatility. Featuring a soft, breathable canvas upper, this shoe provides a snug and secure fit thanks to its unique elastic lacing system." 
+        },
 ]

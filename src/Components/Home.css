@@ -21,7 +21,7 @@ font-weight: bold;
 .navclass{
     width:100%;
     height:80px;
-    background-color: #888888;
+    background-color: #e9e3e3;
 }
 .icon{
     color:black;
@@ -39,14 +39,16 @@ padding: 15px;
     font-size: small;
 padding: 15px;
 }
-
+.nav-link{
+  color:white;
+}
 
 .bgimg{
     position: relative;
 
-    background-image: url("E:\react tutorial\shoe-e-commerce\src\bgimg2.jpg");
+    background-image: url("E:\react tutorial\shoe-e-commerce\src\image7.png");
      height:100vh;
-    width:90%; 
+    width:100%; 
     margin: 0px auto;
     background-repeat: no-repeat;
     background-size: cover;
@@ -75,7 +77,9 @@ text-align: left;
     flex-direction: row;
     gap:20px;
 }
-
+.styleshop{
+  color: black;
+}
 
 
 
@@ -114,10 +118,18 @@ text-align: left;
     width: 500px;
     background-color:white;
     margin-top:100px ;
-    border: 0px solid ;
     
+    border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center;
 }
-
+.formlogi2 h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
 
    .formlogi{
        width: 100%;
@@ -130,6 +142,16 @@ text-align: left;
    .formlogi1{
     margin-top: 50px;
    }
+   .formlogi1 input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+
+
    .btnform1{
 height:30px;
 width:80px;
@@ -252,10 +274,11 @@ height: 300px;;
     margin-top: 50px;
     text-align: left;
     font-size: xx-large;
-    height:150px;
+    height: 75px;
     width:100%;
     color:black;
     letter-spacing: 5px;
+    font-style:oblique
   }
   /*====showproduct)*/
   .show_product{
@@ -305,6 +328,134 @@ margin-right: 10px;
 .listdiv{
   
   background-color: #dbcae7;
-  
+
+}
+
+
+
+/*-----------------------------------adminhome----------*/
+.body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
  
 }
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+ 
+.sidebar a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+div.content {
+  margin-left: 200px;
+  /* padding: 1px 16px; */
+  padding: 0px;
+  height: 100px;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+
+.searchbar1{
+  display: flex;
+  justify-content: center;
+  margin-top:0px
+}
+
+
+.podupdatbtn{
+  height: 400px;
+  width: 400px;
+  margin-left: 450px;
+ justify-content: space-around;
+}
+
+.containeraddprod{
+  width:500px;
+  height: 450px;
+  margin-left: 400px;
+}
+.myproduct{
+  width:150px;
+  height:500px;
+}
+
+.tablediv{
+  width:800px;
+  height: 500px;margin-left: 300px;
+}
+.viewdiv{
+width: 1000px;
+height: 800px;
+margin-left:250px ;
+}
+.userview{
+  width:600px;
+  height: 800px;
+  margin-left: 250px;
+}
+
+
+/* Contact.css */
+.contact-container {
+  text-align: center;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  margin: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.contact-heading {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.contact-address {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.contact-phone, .contact-email {
+  font-size: 16px;
+  color: #777;
+}
+
+

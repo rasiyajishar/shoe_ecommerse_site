@@ -19,7 +19,7 @@ const handleSubmit=(e)=>{
  
 
 
-  setSignup([...signup,{name:nameValue, email:emailValue, password:passwordValue,id:Date.now()}])
+  setSignup([...signup,{name:nameValue, email:emailValue, password:passwordValue,id:signup.length}])
   console.log(signup);
   nav("/Login")
 }
@@ -52,11 +52,18 @@ const handleSubmit=(e)=>{
           <br />
           <br />
           
-          <button onClick={handleSubmit} className="btnform" type="submit">
+           <button onClick={handleSubmit} className="btnform1" type="submit">
             Submit
           </button>
-          <p>All registered user please login</p>
-          <button onClick={()=>nav('/Login')}>Login</button>
+          <br /><br />
+          <p> <h5>Are you a Registered user,</h5><h5>please login</h5> </p>
+          
+          <button onClick={()=>nav('/Login')} className="btnform1" type="submit">
+            Login
+          </button> 
+
+
+
 
 
           <br /> <br />

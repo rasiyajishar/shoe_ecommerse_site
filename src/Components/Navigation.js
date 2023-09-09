@@ -1,9 +1,6 @@
 
 
 
-
-
-
 import { useState } from "react";
 import React from "react";
 
@@ -82,8 +79,14 @@ const Navigation = () => {
     navigate("/Registration");
   };
 
+  const tolookbook = () => {
+    navigate("/Lookbook");
+  };
+
+
   const logout = () => {
-    setLogout(false);
+    
+    setLogin(false);
     alert("logout");
     setUsername('');
   };
@@ -97,6 +100,7 @@ const Navigation = () => {
         light
         bgColor="light"
         sticky="top"
+        color="black"
       >
         <MDBContainer fluid>
           <MDBNavbarBrand className="plashoe" onClick={tohome}>
@@ -156,7 +160,7 @@ const Navigation = () => {
                 <MDBNavbarLink
                   active
                   aria-current="page"
-                  href="#"
+                  
                   onClick={tocollection}
                 >
                   COLLECTION
@@ -167,7 +171,7 @@ const Navigation = () => {
                 <MDBNavbarLink
                   active
                   aria-current="page"
-                  href="#"
+                  
                   onClick={tocontact}
                 >
                   CONTACT
@@ -175,31 +179,17 @@ const Navigation = () => {
               </MDBNavbarItem>
 
               <MDBNavbarItem>
-                <MDBNavbarLink href="#">LOOKBOOK</MDBNavbarLink>
+                <MDBNavbarLink onClick={tolookbook} >LOOKBOOK</MDBNavbarLink>
               </MDBNavbarItem>
 
+             
+             
+               
               <MDBNavbarItem>
-                <MDBNavbarLink active aria-current="page" href="#">
-                  SALE
-                </MDBNavbarLink>
-              </MDBNavbarItem>
-
-              <MDBNavbarItem>
-                <MDBNavbarLink
-                  active
-                  aria-current="page"
-                  href="#"
-                  onClick={toourstory}
-                >
-                  OUR STORY
-                </MDBNavbarLink>
-              </MDBNavbarItem>
-
-              <MDBNavbarItem>
-                <MDBNavbarLink href="#" onClick={tocart}>
+                <MDBNavbarLink  onClick={tocart}>
                   <BsFillCartFill />{" "}
                   <>
-                    <a className="mx-3" href="#!">
+                    <a className="mx-3" >
                       <MDBIcon fas icon="shoppingcart" size="sm" />
                       <MDBBadge color="danger" notification pill>
                         {cart.length}

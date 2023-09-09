@@ -11,12 +11,13 @@ import Cart from './Components/Cart';
 import Collection from './Components/Collection';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Registration from './Components/Registration';
-import Reset from './Components/Reset';
-import { products } from './Components/productdata';
+
+import { productdata } from './Components/productdata';
 import { mycontext } from './Components/Context';
 import Showproduct from './Components/Showproduct';
 import { useState } from 'react';
 import Admin_home from './Admin/Admin_home';
+import {value} from "./Admin/Userdata";
 
 function App() {
 const [qty,setQty]=useState(1)
@@ -28,6 +29,8 @@ const[username,setUsername]=useState()
 const[logout,setLogout]=useState()
 const[searchquery,setSearchquery]=useState('')
 const[searchresults,setSearchresults]=useState([])
+const[products,setProducts]=useState(productdata)
+// const[producctts,setProducctts]=useState([])
   return (
 
     <div className="App">
@@ -52,7 +55,11 @@ const[searchresults,setSearchresults]=useState([])
           searchquery,
           setSearchquery,
           searchresults,
-          setSearchresults
+          setSearchresults,
+          value,
+          // producctts,
+          // setProducctts,
+          setProducts,
         }}
       >
 
@@ -66,9 +73,16 @@ const[searchresults,setSearchresults]=useState([])
 <Route path="/Cart" element={<Cart />} />
 <Route path="/Collection" element={<Collection />} />
 <Route path="/Registration" element={<Registration />} />
-<Route path="/Reset" element={<Reset />} />
+
 <Route path="/Showproduct/:id" element={<Showproduct />} />
-<Route path='/Admin_home' element={<Admin_home />} />
+<Route path='/Admin' element={<Admin_home />} />
+<Route path='/Admin/Productupate' element={<Admin_home />} />
+<Route path='/Admin/User' element={<Admin_home />} />
+<Route path='/Admin/Addproduct' element={<Admin_home />} />
+<Route path='Admin/Admin_men' element={<Admin_home />} />
+<Route path='Admin/Admin_women' element={<Admin_home />} />
+<Route path='/Admin/Editproduct' element={<Admin_home />} />
+<Route path='/Editproduct/:id' element={<Admin_home />} />
 </Routes>
 </mycontext.Provider>
     </div>
