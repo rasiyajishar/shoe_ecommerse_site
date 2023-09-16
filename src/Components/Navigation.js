@@ -98,9 +98,9 @@ const Navigation = () => {
         className="navclass"
         expand="lg"
         light
-        bgColor="light"
+        bgColor="brown"
         sticky="top"
-        color="black"
+        color="white"
       >
         <MDBContainer fluid>
           <MDBNavbarBrand className="plashoe" onClick={tohome}>

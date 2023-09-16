@@ -18,6 +18,7 @@ import Showproduct from './Components/Showproduct';
 import { useState } from 'react';
 import Admin_home from './Admin/Admin_home';
 import {value} from "./Admin/Userdata";
+import Lookbook from './Components/Lookbook';
 
 function App() {
 const [qty,setQty]=useState(1)
@@ -73,7 +74,7 @@ const[products,setProducts]=useState(productdata)
 <Route path="/Cart" element={<Cart />} />
 <Route path="/Collection" element={<Collection />} />
 <Route path="/Registration" element={<Registration />} />
-
+<Route path='/Lookbook' element={<Lookbook />} />
 <Route path="/Showproduct/:id" element={<Showproduct />} />
 <Route path='/Admin' element={<Admin_home />} />
 <Route path='/Admin/Productupate' element={<Admin_home />} />

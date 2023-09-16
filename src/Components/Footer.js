@@ -20,7 +20,7 @@ function Footer() {
   return (
     <MDBFooter
       className="text-center text-white"
-      style={{ backgroundColor: "#caced1" }}
+      style={{ backgroundColor: "grey" }}
     >
       <MDBContainer className="p-4">
         <br />
