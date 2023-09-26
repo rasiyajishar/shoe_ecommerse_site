@@ -93,11 +93,11 @@ const Navigation = () => {
   
   return (
     <>
-      {/* <div className="head1"><p className="para1">Free Express Shipping on all orders with all duties included</p></div>*/}
+     <div className="head1"><p className="para1">Free Express Shipping on all orders with all duties included</p></div>
       <MDBNavbar
         className="navclass"
         expand="lg"
-        light
+        // light
         bgColor="brown"
         sticky="top"
         color="white"

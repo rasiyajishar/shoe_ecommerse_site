@@ -1,8 +1,14 @@
+.background{
+  background-color:#0f0f0f
+}
+
 .plashoe{
 letter-spacing: 5px;
 font-weight: bold;
 cursor: pointer;
 }
+
+
 
 .homepgdiv{
   
@@ -10,7 +16,7 @@ cursor: pointer;
     font-size:small;
     height:30px;
     width:100%;
-    color:black;
+    color:rgb(17, 17, 17);
     letter-spacing: 5px;
 }
 
@@ -22,7 +28,7 @@ cursor: pointer;
 .navclass{
     width:100%;
     height:80px;
-    background-color: rgb(126, 121, 121);
+     background-color: rgb(126, 121, 121); 
     color: #f1f1f1;
     /* background-color: #e9e3e3; */
 }
@@ -30,18 +36,37 @@ cursor: pointer;
     color:black;
 }
 .head1{
-    height:10px;
-    background-color: rgb(242, 242, 248);
+    height:50px;
+    background-color: rgb(15, 15, 15);
     font-size: small;
 padding: 15px;
+display: flex;
+justify-content: center;
 }
 .para1{
-    color:yellowgreen;
-    height:10px;
+    color:rgb(198, 241, 8);
+    height:20px;
     
     font-size: small;
 padding: 15px;
+
+  font-weight:2em;
+  border: 1px solid #000;
+  display: inline-block;
+  animation: moveRight 10s linear infinite; 
 }
+
+@keyframes moveRight {
+  0% {
+    transform: translateX(-100%); /* Start from off the left side */
+  }
+  100% {
+    transform: translateX(100%); /* Move to off the right side */
+  }
+}
+
+
+
 .nav-link{
   color:white;
 }
@@ -109,11 +134,7 @@ text-align: left;
     
     border-style: none;
    }
-   .para1{
-    color:white;
-    font-size:large;
-
-   }
+   
 
    
 .formlogi2{
@@ -470,6 +491,13 @@ margin-left:250px ;
   .lookbook{
     letter-spacing: 5px;
     font-size: 8em;
+    font-style: oblique;
+    font-family: 'Times New Roman', Times, serif;
+    
+  }
+  .cartpgdisply{
+    letter-spacing: 5px;
+    font-size: 4em;
     font-style: oblique;
     font-family: 'Times New Roman', Times, serif;
     

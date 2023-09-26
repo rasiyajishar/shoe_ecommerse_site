@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 import React from "react";
 import  Search  from "./Search";
 import "../Components/Home.css";
@@ -8,7 +8,7 @@ import Footer from "./Footer";
 
 
 const Home = () => {
-  const [showBasic, setShowBasic] = useState(true);
+  // const [showBasic, setShowBasic] = useState(true);
 
 const navigat=useNavigate();
   const tomen=()=>{
@@ -18,13 +18,13 @@ const navigat=useNavigate();
 const towomen=()=>{
   navigat('Women')
 }
-const tocollection=()=>{
-  navigat('Collection')
-}
+// const tocollection=()=>{
+//   navigat('Collection')
+// }
 
   return (
     <>
-  
+  <div className="background">
       <Navigation />
       <Search />
 <div className="homepgdiv"></div>
@@ -49,6 +49,7 @@ const tocollection=()=>{
         
       </diV>
       <Footer />
+      </div>
     </>
   );
 };

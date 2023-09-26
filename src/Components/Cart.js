@@ -39,7 +39,9 @@ const Cart = () => {
   };
 
   return (
+    
     <div>
+      <div className='cartpgdisply'>Please Select Your Favourite Items</div>
       {cart.map((product) => (
         <div key={product.id} className='div-m-2'>
          <Card>
